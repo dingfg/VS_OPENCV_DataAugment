@@ -12,6 +12,7 @@
 using namespace std;
 using namespace cv;
 
+<<<<<<< HEAD
 // first: Resize    Second:  Flip    Third:   Rotate
 
 
@@ -22,12 +23,15 @@ using namespace cv;
 
 
 
+=======
+>>>>>>> e14e616835415da772b0370e3472bad592134524
 /************************************************************************/
 /*  Image Rotate                                                        */
 /************************************************************************/
 void main()
 {
 	FindFiles ff;
+<<<<<<< HEAD
 	//std::vector<std::string> fileNames = ff.findFiles("F:\\train_six_stage\\img\\aug_data\\0.0_1_0\\");
 	//std::vector<std::string> fileNames = ff.findFiles("F:\\train_six_stage\\img\\aug_data\\0.0_1_1\\");
 	//std::vector<std::string> fileNames = ff.findFiles("F:\\train_six_stage\\img\\aug_data_scale_0.5\\0.0_1_0\\");
@@ -61,6 +65,66 @@ void main()
 
 	//for (int j = 0; j<15; j++)
 	for (int j = 0; j<2; j++)
+=======
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_data\\0.0_1_0\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_data\\0.0_1_1\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_data_scale_0.5\\0.0_1_0\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_data_scale_0.5\\0.0_1_1\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_data_scale_1.5\\0.0_1_0\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_data_scale_1.5\\0.0_1_1\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_gt\\0.0_1_0\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_gt\\0.0_1_1\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_gt_scale_0.5\\0.0_1_0\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_gt_scale_0.5\\0.0_1_1\\");
+	std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_gt_scale_1.5\\0.0_1_0\\");
+	//std::vector<std::string> fileNames = ff.findFiles("F:\\train(six_stage)\\aug_gt_scale_1.5\\0.0_1_1\\");
+
+	std::vector<std::string> r_list(15);
+	//r_list[0] = "22.5_1_0";
+	//r_list[1] = "45.0_1_0";
+	//r_list[2] = "67.5_1_0";
+	//r_list[3] = "90.0_1_0";
+	//r_list[4] = "112.5_1_0";
+	//r_list[5] = "135.0_1_0";
+	//r_list[6] = "157.5_1_0";
+	//r_list[7] = "180.0_1_0";
+	//r_list[8] = "202.5_1_0";
+	//r_list[9] = "225.0_1_0";
+	//r_list[10] = "247.5_1_0";
+	//r_list[11] = "270.0_1_0";
+	//r_list[12] = "292.5_1_0";
+	//r_list[13] = "315.0_1_0";
+	//r_list[14] = "337.5_1_0";
+
+	r_list[0] = "45.0_1_0";
+	r_list[1] = "90.0_1_0";
+	r_list[2] = "135.0_1_0";
+	r_list[3] = "180.0_1_0";
+	r_list[4] = "225.0_1_0";
+	r_list[5] = "270.0_1_0";
+	r_list[6] = "315.0_1_0";
+
+	/*r_list[0] = "45.0_1_1";
+	r_list[1] = "90.0_1_1";
+	r_list[2] = "135.0_1_1";
+	r_list[3] = "180.0_1_1";
+	r_list[4] = "225.0_1_1";
+	r_list[5] = "270.0_1_1";
+	r_list[6] = "315.0_1_1";*/
+
+	//std::string savePath = "F:\\train(six_stage)\\aug_data\\";
+	//std::string savePath = "F:\\train(six_stage)\\aug_data_scale_0.5\\";
+	//std::string savePath = "F:\\train(six_stage)\\aug_data_scale_1.5\\";
+	//std::string savePath = "F:\\train(six_stage)\\aug_gt\\";
+	//std::string savePath = "F:\\train(six_stage)\\aug_gt_scale_0.5\\";
+	std::string savePath = "F:\\train(six_stage)\\aug_gt_scale_1.5\\";
+
+	/*double theta = 22.5;*/
+	double theta = 45;
+
+	//for (int j = 0; j<15; j++)
+	for (int j = 0; j<7; j++)
+>>>>>>> e14e616835415da772b0370e3472bad592134524
 	{
 		std::string curPath = savePath + r_list[j] + "\\";
 		_mkdir(curPath.c_str());
@@ -82,7 +146,11 @@ void main()
 			cv::imwrite(curPath + fname, rMat);
 		}
 		//theta += 22.5;
+<<<<<<< HEAD
 		theta += theta2;
+=======
+		theta += 45;
+>>>>>>> e14e616835415da772b0370e3472bad592134524
 	}
 }
 
@@ -92,6 +160,7 @@ void main()
 /************************************************************************/
 //void main()
 //{
+<<<<<<< HEAD
 //	/*char *folder = "F:\\train_six_stage\\img\\aug_data\\0.0_1_0";
 //	std::string savePath = F:\\train_six_stage\\img\\aug_data\\0.0_1_1\\";*/
 //
@@ -109,6 +178,25 @@ void main()
 //
 // //char *folder         = "F:\\train_six_stage\\SegmentationClass\\aug_gt_scale_1.5\\0.0_1_0";
 // //std::string savePath = "F:\\train_six_stage\\SegmentationClass\\aug_gt_scale_1.5\\0.0_1_1\\";
+=======
+//	/*char *folder = "F:\\train(six_stage)\\aug_data\\0.0_1_0";
+//	std::string savePath = "F:\\train(six_stage)\\aug_data\\0.0_1_1\\";*/
+//
+//	/*char *folder = "F:\\train(six_stage)\\aug_data_scale_0.5\\0.0_1_0";
+//	std::string savePath = "F:\\train(six_stage)\\aug_data_scale_0.5\\0.0_1_1\\";*/
+//
+//	/*char *folder = "F:\\train(six_stage)\\aug_data_scale_1.5\\0.0_1_0";
+//	std::string savePath = "F:\\train(six_stage)\\aug_data_scale_1.5\\0.0_1_1\\";*/
+//
+//	/*char *folder = "F:\\train(six_stage)\\aug_gt\\0.0_1_0";
+//	std::string savePath = "F:\\train(six_stage)\\aug_gt\\0.0_1_1\\";*/
+//
+//	/*char *folder = "F:\\train(six_stage)\\aug_gt_scale_0.5\\0.0_1_0";
+//	std::string savePath = "F:\\train(six_stage)\\aug_gt_scale_0.5\\0.0_1_1\\";*/
+//
+// char *folder         = "F:\\train(six_stage)\\aug_gt_scale_1.5\\0.0_1_0";
+// std::string savePath = "F:\\train(six_stage)\\aug_gt_scale_1.5\\0.0_1_1\\";
+>>>>>>> e14e616835415da772b0370e3472bad592134524
 //
 // _mkdir(savePath.c_str());
 //
